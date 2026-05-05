@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Install MinGW
         run: |
@@ -25,7 +25,7 @@ jobs:
           x86_64-w64-mingw32-gcc src/main.c -o test.exe
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: test-windows-exe
           path: test.exe
